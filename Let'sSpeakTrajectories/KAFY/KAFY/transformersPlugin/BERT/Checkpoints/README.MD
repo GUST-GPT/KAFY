@@ -1,0 +1,1 @@
+This folder should contain the models saved. But it's added to Gitigore
