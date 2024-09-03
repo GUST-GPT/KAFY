@@ -40,18 +40,27 @@ To use the SQL-like command interface, you can execute commands directly from th
 
 ## Pretraining a Model:
 ```python
-kafy_parser "PRETRAIN bert FROM mydata.csv USING bert_config.json AS my_pretrained_model.pkl"
+kafy_parser "PRETRAIN bert \
+FROM mydata.csv \
+USING bert_config.json \
+AS my_pretrained_model.pkl"
 ```
 
 ## Fine-Tune a Model:
 
 ```python
-kafy_parser "FINETUNE bert FOR summarization USING my_pretrained_model.pkl WITH finetune_config.json AS my_finetuned_model.pkl"
+kafy_parser "FINETUNE bert \
+FOR summarization \
+USING my_pretrained_model.pkl \
+WITH finetune_config.json \
+AS my_finetuned_model.pkl"
 ```
 ## Summarize Data:
 
 ```python
-kafy_parser "SUMMARIZE FROM requested_data_to_summarize.csv USING my_finetuned_model.pkl"
+kafy_parser "SUMMARIZE \
+FROM requested_data_to_summarize.csv \
+USING my_finetuned_model.pkl"
 ```
 
 
